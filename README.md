@@ -296,6 +296,38 @@
 
 </details>
 
+# How to setup:
+
+### 1. Внутри .env.example находятся валидные значения для .env
+
+```bash
+cp .env.example .env
+```
+
+### 2. Подготовить локальное окружение
+
+```bash
+python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+```
+
+### 3. Запуск миграций
+
+```bash
+alembic upgrade head
+```
+
+### 4. Запуск тестов
+
+```bash
+pytest ./src/tests/test_main.py
+```
+
+### 5. Запуск проекта
+
+```bash
+docker-compose up --build
+```
+
 
 ## Требования к решению
 

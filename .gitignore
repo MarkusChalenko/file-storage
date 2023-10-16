@@ -2,3 +2,6 @@
 .idea/
 __pycache__/
 *.pyc
+.env
+user_files/
+test_file.txt
