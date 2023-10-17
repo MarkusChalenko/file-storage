@@ -16,9 +16,9 @@ from sqlalchemy import and_, exc
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 
-from src.core.config import app_settings
-from src.db import Base
-from src.models.users import Token, User
+from core.config import app_settings
+from db import Base
+from models.users import Token, User
 
 from .utils import (DEFAULT_FOLDER, HTTP_400_BAD_REQUEST,
                     HTTP_413_REQUEST_ENTITY_TOO_LARGE,

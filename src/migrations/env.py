@@ -11,7 +11,7 @@ from alembic import context
 
 from dotenv import load_dotenv
 
-from src.db.db import Base
+from db.db import Base
 
 load_dotenv('.env')
 

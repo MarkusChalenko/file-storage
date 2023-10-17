@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from gunicorn.app.wsgiapp import WSGIApplication
 from pydantic import BaseSettings, PostgresDsn
 
-from src.core.logger import LOGGING
+from core.logger import LOGGING
 
 logging_config.dictConfig(LOGGING)
 
@@ -29,9 +29,8 @@ class ServerApplication(WSGIApplication):
 
 class AppSettings(BaseSettings):
     app_title: str = "Fastapi file server"
-    database_dsn: PostgresDsn = ('postgresql+asyncpg://postgres:'
-                                 'postgres@postgres:5432/postgres')
-    project_host: str = '0.0.0.0'
+    database_dsn: PostgresDsn = 'postgresql+asyncpg://postgres:postgres@postgres:5432/postgres'
+    project_host: str = 'file-server'
     project_port: int = 8000
     token_expires_min: int = 120
     redis_host: str = 'cache'

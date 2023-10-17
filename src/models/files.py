@@ -5,7 +5,7 @@ from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String
 from sqlalchemy.orm import relationship
 from sqlalchemy_utils import UUIDType
 
-from src.db import Base
+from db import Base
 
 
 class File(Base):

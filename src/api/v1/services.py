@@ -2,11 +2,11 @@ from fastapi import APIRouter, Depends
 from fastapi_cache.backends.redis import RedisCacheBackend
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.cache.utils import ping_cache, redis_cache
-from src.core.logger import logger
-from src.db import get_session
-from src.schemas.services import Ping
-from src.services.files import files_crud
+from cache.utils import ping_cache, redis_cache
+from core.logger import logger
+from db import get_session
+from schemas.services import Ping
+from services.files import files_crud
 
 
 router = APIRouter()

@@ -4,12 +4,12 @@ from fastapi.responses import FileResponse
 from fastapi_cache.backends.redis import RedisCacheBackend
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.cache.utils import get_cache, get_key_by_pattern, redis_cache, set_cache
-from src.core.logger import logger
-from src.db.db import get_session
-from src.models.users import User
-from src.schemas.files import FileInDB, FileSearchMatches, FilesList
-from src.api.v1.services import files_crud
+from cache.utils import get_cache, get_key_by_pattern, redis_cache, set_cache
+from core.logger import logger
+from db.db import get_session
+from models.users import User
+from schemas.files import FileInDB, FileSearchMatches, FilesList
+from api.v1.services import files_crud
 
 from .utils import current_user
 

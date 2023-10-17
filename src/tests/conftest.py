@@ -13,10 +13,10 @@ from sqlalchemy.ext.asyncio import (AsyncEngine, AsyncSession,
                                     create_async_engine)
 from sqlalchemy.orm import sessionmaker
 
-from src.cache.utils import redis_cache
-from src.core.config import app_settings
-from src.db import Base, get_session
-from src.main import app
+from cache.utils import redis_cache
+from core.config import app_settings
+from db import Base, get_session
+from main import app
 
 from .utils import (BASE_URL, REDIS_KEY, REDIS_URL, TEST_DB_NAME,
                     TEST_PASSWORD, TEST_USER2, database_dsn,

@@ -1,5 +1,5 @@
-from src.models.users import Token, User
-from src.schemas.users import UserCreate
+from models.users import Token, User
+from schemas.users import UserCreate
 
 from .base import RepositoryDBToken, RepositoryDBUser
 

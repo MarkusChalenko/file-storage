@@ -316,7 +316,7 @@ python3 -m venv venv && source venv/bin/activate && pip install -r requirements.
 alembic upgrade head
 ```
 
-### 4. Запуск тестов
+### 4. Запуск тестов (работают вне контейнера приложения)
 
 ```bash
 pytest ./src/tests/test_main.py

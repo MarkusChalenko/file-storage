@@ -5,7 +5,7 @@ from fastapi import status
 from httpx import AsyncClient
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from src.main import app
+from main import app
 
 from .utils import (TEST_FILE, TEST_FOLDER, TEST_PASSWORD, TEST_USER1,
                     UPLOAD_FILES)

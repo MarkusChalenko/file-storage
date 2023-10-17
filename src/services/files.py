@@ -1,5 +1,5 @@
-from src.models.files import File
-from src.schemas.files import FileCreate, FileInDB
+from models.files import File
+from schemas.files import FileCreate, FileInDB
 
 from .base import RepositoryDBFile
 

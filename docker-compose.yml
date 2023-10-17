@@ -32,7 +32,6 @@ services:
       - ${FS_PORTS}
     env_file:
       - ./.env
-    command: "alembic upgrade head && python3 src/main.py"
     volumes:
       - media_data:/app/media/
     depends_on:
