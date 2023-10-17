@@ -3,8 +3,8 @@ version: '3.9'
 services:
   postgres:
     image: postgres:14.5-alpine
-    ports:
-      - ${DB_PORTS}
+    expose:
+      - ${DB_PORT}
     env_file:
       - ./.env
     environment:
@@ -17,8 +17,8 @@ services:
   cache:
     image: redis:6.2-alpine
     restart: always
-    ports:
-      - ${CACHE_PORTS}
+    expose:
+      - 6379
     depends_on:
       - postgres
     volumes:
@@ -29,7 +29,7 @@ services:
       dockerfile: Dockerfile
       context: .
     expose:
-      - ${FS_PORT}
+      - 8000
     env_file:
       - ./.env
     volumes:
